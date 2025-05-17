@@ -1,6 +1,6 @@
-YurtMenuApi/
+YurttaYe/
 ├── src/
-│   ├── YurtMenuApi.Application/
+│   ├── YurttaYe.Application/
 │   │   ├── Abstractions/
 │   │   │   ├── Repositories/
 │   │   │   │   ├── IMenuItemRepository.cs
@@ -25,12 +25,12 @@ YurtMenuApi/
 │   │   │       └── GetMenuItemByIdHandler.cs
 │   │   └── Common/
 │   │       └── Result.cs
-│   ├── YurtMenuApi.Domain/
+│   ├── YurttaYe.Domain/
 │   │   ├── Entities/
 │   │   │   └── MenuItem.cs
 │   │   └── ValueObjects/
 │   │       └── Price.cs
-│   ├── YurtMenuApi.Infrastructure/
+│   ├── YurttaYe.Infrastructure/
 │   │   ├── Persistence/
 │   │   │   ├── Configurations/
 │   │   │   │   └── MenuItemConfiguration.cs
@@ -41,7 +41,7 @@ YurtMenuApi/
 │   │   │   └── AppDbContext.cs
 │   │   └── Services/
 │   │       └── AuthService.cs
-│   ├── YurtMenuApi.WebApi/
+│   ├── YurttaYe.WebApi/
 │   │   ├── Controllers/
 │   │   │   ├── MenuController.cs
 │   │   │   └── AuthController.cs
@@ -59,14 +59,14 @@ YurtMenuApi/
 │   │   ├── Startup.cs (opsiyonel, .NET 6 öncesi)
 │   │   └── appsettings.json
 ├── tests/
-│   ├── YurtMenuApi.Tests.Unit/
+│   ├── YurttaYe.Tests.Unit/
 │   │   ├── Application/
 │   │   │   └── MenuItemServiceTests.cs
 │   │   ├── Domain/
 │   │   │   └── MenuItemTests.cs
 │   │   └── Infrastructure/
 │   │       └── MenuItemRepositoryTests.cs
-│   └── YurtMenuApi.Tests.Integration/
+│   └── YurttaYe.Tests.Integration/
 │       └── MenuControllerTests.cs
 ├── wwwroot/
 │   ├── css/
@@ -81,5 +81,5 @@ YurtMenuApi/
 │   └── docker-compose.yml
 ├── .gitignore
 ├── README.md
-├── YurtMenuApi.sln
+├── YurttaYe.sln
 └── LICENSE

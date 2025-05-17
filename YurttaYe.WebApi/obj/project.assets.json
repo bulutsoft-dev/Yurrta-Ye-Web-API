@@ -107,6 +107,36 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "YurttaYe.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/YurttaYe.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/YurttaYe.Application.dll": {}
+        }
+      },
+      "YurttaYe.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/YurttaYe.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/YurttaYe.Domain.dll": {}
+        }
+      },
+      "YurttaYe.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/YurttaYe.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/YurttaYe.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -473,12 +503,30 @@
         "swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "YurttaYe.Application/1.0.0": {
+      "type": "project",
+      "path": "../YurttaYe.Application/YurttaYe.Application.csproj",
+      "msbuildProject": "../YurttaYe.Application/YurttaYe.Application.csproj"
+    },
+    "YurttaYe.Domain/1.0.0": {
+      "type": "project",
+      "path": "../YurttaYe.Domain/YurttaYe.Domain.csproj",
+      "msbuildProject": "../YurttaYe.Domain/YurttaYe.Domain.csproj"
+    },
+    "YurttaYe.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../YurttaYe.Infrastructure/YurttaYe.Infrastructure.csproj",
+      "msbuildProject": "../YurttaYe.Infrastructure/YurttaYe.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.AspNetCore.OpenApi >= 8.0.16",
-      "Swashbuckle.AspNetCore >= 6.6.2"
+      "Swashbuckle.AspNetCore >= 6.6.2",
+      "YurttaYe.Application >= 1.0.0",
+      "YurttaYe.Domain >= 1.0.0",
+      "YurttaYe.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -487,11 +535,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe-Web-API/YurttaYe-Web-API.csproj",
-      "projectName": "YurttaYe-Web-API",
-      "projectPath": "/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe-Web-API/YurttaYe-Web-API.csproj",
+      "projectUniqueName": "/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.WebApi/YurttaYe.WebApi.csproj",
+      "projectName": "YurttaYe.WebApi",
+      "projectPath": "/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.WebApi/YurttaYe.WebApi.csproj",
       "packagesPath": "/home/furkanblt/.nuget/packages/",
-      "outputPath": "/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe-Web-API/obj/",
+      "outputPath": "/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.WebApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/furkanblt/.nuget/NuGet/NuGet.Config"
@@ -505,7 +553,17 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Application/YurttaYe.Application.csproj": {
+              "projectPath": "/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Application/YurttaYe.Application.csproj"
+            },
+            "/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Domain/YurttaYe.Domain.csproj": {
+              "projectPath": "/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Domain/YurttaYe.Domain.csproj"
+            },
+            "/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Infrastructure/YurttaYe.Infrastructure.csproj": {
+              "projectPath": "/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Infrastructure/YurttaYe.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

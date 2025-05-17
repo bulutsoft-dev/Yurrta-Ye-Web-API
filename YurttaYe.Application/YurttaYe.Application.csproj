@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Abstractions\Repositories\" />
+      <Folder Include="Abstractions\Services\" />
+      <Folder Include="Common\" />
+      <Folder Include="DTOs\" />
+      <Folder Include="Features\Commands\" />
+      <Folder Include="Features\Handlers\" />
+      <Folder Include="Features\Queries\" />
+    </ItemGroup>
+
+</Project>

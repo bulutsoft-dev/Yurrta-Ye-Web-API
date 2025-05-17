@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B8t54l7k4/k=",
+  "dgSpecHash": "c8gtUm4zj0s=",
   "success": true,
-  "projectFilePath": "/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe-Web-API/YurttaYe-Web-API.csproj",
+  "projectFilePath": "/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.WebApi/YurttaYe.WebApi.csproj",
   "expectedPackageFiles": [
     "/home/furkanblt/.nuget/packages/microsoft.aspnetcore.openapi/8.0.16/microsoft.aspnetcore.openapi.8.0.16.nupkg.sha512",
     "/home/furkanblt/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

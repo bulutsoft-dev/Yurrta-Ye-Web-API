@@ -12,4 +12,16 @@
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\YurttaYe.Application\YurttaYe.Application.csproj" />
+      <ProjectReference Include="..\YurttaYe.Domain\YurttaYe.Domain.csproj" />
+      <ProjectReference Include="..\YurttaYe.Infrastructure\YurttaYe.Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Controllers\" />
+      <Folder Include="Middleware\" />
+      <Folder Include="Pages\Admin\Menu\" />
+    </ItemGroup>
+
 </Project>
