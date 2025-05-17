@@ -6,14 +6,4 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
-    <ItemGroup>
-      <Folder Include="Abstractions\Repositories\" />
-      <Folder Include="Abstractions\Services\" />
-      <Folder Include="Common\" />
-      <Folder Include="DTOs\" />
-      <Folder Include="Features\Commands\" />
-      <Folder Include="Features\Handlers\" />
-      <Folder Include="Features\Queries\" />
-    </ItemGroup>
-
 </Project>

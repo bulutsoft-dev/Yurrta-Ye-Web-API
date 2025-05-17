@@ -1,3 +1,5 @@
+# YurttaYe Project Structure
+
 YurttaYe/
 ├── src/
 │   ├── YurttaYe.Application/
@@ -7,14 +9,16 @@ YurttaYe/
 │   │   │   │   └── IUnitOfWork.cs
 │   │   │   └── Services/
 │   │   │       ├── IMenuItemService.cs
-│   │   │       └── IAuthService.cs
+│   │   │       ├── IAuthService.cs
+│   │   │       └── IFileProcessingService.cs
 │   │   ├── DTOs/
 │   │   │   ├── MenuItemDto.cs
 │   │   │   └── MenuItemCreateDto.cs
 │   │   ├── Features/
 │   │   │   ├── Commands/
 │   │   │   │   ├── CreateMenuItemCommand.cs
-│   │   │   │   └── UpdateMenuItemCommand.cs
+│   │   │   │   ├── UpdateMenuItemCommand.cs
+│   │   │   │   └── ProcessMenuFileCommand.cs
 │   │   │   ├── Queries/
 │   │   │   │   ├── GetAllMenuItemsQuery.cs
 │   │   │   │   └── GetMenuItemByIdQuery.cs
@@ -22,7 +26,8 @@ YurttaYe/
 │   │   │       ├── CreateMenuItemHandler.cs
 │   │   │       ├── UpdateMenuItemHandler.cs
 │   │   │       ├── GetAllMenuItemsHandler.cs
-│   │   │       └── GetMenuItemByIdHandler.cs
+│   │   │       ├── GetMenuItemByIdHandler.cs
+│   │   │       └── ProcessMenuFileHandler.cs
 │   │   └── Common/
 │   │       └── Result.cs
 │   ├── YurttaYe.Domain/
@@ -40,7 +45,8 @@ YurttaYe/
 │   │   │   │   └── MenuItemRepository.cs
 │   │   │   └── AppDbContext.cs
 │   │   └── Services/
-│   │       └── AuthService.cs
+│   │       ├── AuthService.cs
+│   │       └── FileProcessingService.cs
 │   ├── YurttaYe.WebApi/
 │   │   ├── Controllers/
 │   │   │   ├── MenuController.cs
@@ -52,30 +58,35 @@ YurttaYe/
 │   │   │   │   ├── Menu/
 │   │   │   │   │   ├── Index.cshtml
 │   │   │   │   │   ├── Create.cshtml
-│   │   │   │   │   └── Edit.cshtml
+│   │   │   │   │   ├── Edit.cshtml
+│   │   │   │   │   └── Upload.cshtml
 │   │   │   ├── Menu.cshtml
 │   │   │   └── Menu.cshtml.cs
+│   │   ├── wwwroot/
+│   │   │   ├── css/
+│   │   │   │   └── site.css
+│   │   │   ├── js/
+│   │   │   │   └── site.js
+│   │   │   └── lib/
+│   │   │       └── tailwind/
+│   │   │           └── tailwind.min.css
 │   │   ├── Program.cs
-│   │   ├── Startup.cs (opsiyonel, .NET 6 öncesi)
 │   │   └── appsettings.json
 ├── tests/
 │   ├── YurttaYe.Tests.Unit/
 │   │   ├── Application/
-│   │   │   └── MenuItemServiceTests.cs
+│   │   │   ├── MenuItemServiceTests.cs
+│   │   │   └── FileProcessingServiceTests.cs
 │   │   ├── Domain/
 │   │   │   └── MenuItemTests.cs
 │   │   └── Infrastructure/
 │   │       └── MenuItemRepositoryTests.cs
 │   └── YurttaYe.Tests.Integration/
-│       └── MenuControllerTests.cs
-├── wwwroot/
-│   ├── css/
-│   │   └── site.css
-│   ├── js/
-│   │   └── site.js
-│   └── lib/
-│       └── tailwind/
-│           └── tailwind.min.css
+│       ├── MenuControllerTests.cs
+│       └── FileUploadTests.cs
+├── storage/
+│   └── uploaded_files/
+│       └── temp/
 ├── docker/
 │   ├── Dockerfile
 │   └── docker-compose.yml
