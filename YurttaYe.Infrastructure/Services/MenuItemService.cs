@@ -1,7 +1,8 @@
 // src/YurttaYe.Application/Services/MenuItemService.cs
-using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using MediatR;
 using YurttaYe.Application.Abstractions.Services;
 using YurttaYe.Application.DTOs;
 using YurttaYe.Application.Features.Commands;
@@ -32,25 +33,21 @@ namespace YurttaYe.Application.Services
         {
             var result = await _mediator.Send(new CreateMenuItemCommand { MenuItem = dto });
             if (!result.IsSuccess)
-                throw new System.Exception(result.ErrorMessage);
+                throw new Exception(result.ErrorMessage);
         }
 
         public async Task UpdateAsync(int id, MenuItemCreateDto dto)
         {
             var result = await _mediator.Send(new UpdateMenuItemCommand { Id = id, MenuItem = dto });
             if (!result.IsSuccess)
-                throw new System.Exception(result.ErrorMessage);
+                throw new Exception(result.ErrorMessage);
         }
 
         public async Task DeleteAsync(int id)
         {
-            var item = await GetByIdAsync(id);
-            if (item == null)
-                throw new System.Exception("Menu item not found");
-
-            var result = await _mediator.Send(new UpdateMenuItemCommand { Id = id, MenuItem = null }); // Soft delete or implement DeleteCommand
+            var result = await _mediator.Send(new DeleteMenuItemCommand { Id = id });
             if (!result.IsSuccess)
-                throw new System.Exception(result.ErrorMessage);
+                throw new Exception(result.ErrorMessage);
         }
     }
 }

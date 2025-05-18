@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.WebApi
 build_property._RazorSourceGeneratorDebug = 
 
+[/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.WebApi/Pages/Admin/Auth/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vQXV0aC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.WebApi/Pages/Admin/Menu/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vTWVudS9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

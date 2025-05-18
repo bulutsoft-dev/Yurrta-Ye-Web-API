@@ -1,5 +1,6 @@
 // src/YurttaYe.Domain/Entities/MenuItem.cs
 
+using System;
 using YurttaYe.Domain.ValueObjects;
 
 namespace YurttaYe.Domain.Entities
@@ -8,39 +9,33 @@ namespace YurttaYe.Domain.Entities
     {
         public int Id { get; private set; }
         public string Name { get; private set; }
-        public string Category { get; private set; } // Çorba, Ana Yemek, Yan Yemek, Salata/Tatlı, Ek Ürün
+        public string Category { get; private set; }
         public Gramaj Gramaj { get; private set; }
-        public Price? Price { get; private set; } // Opsiyonel, bazı öğeler ücretsiz olabilir (örneğin, Su)
-        public Calorie? Calorie { get; private set; } // Opsiyonel, kalori bilgisi her zaman olmayabilir
+        public Price Price { get; private set; }
+        public Calorie Calorie { get; private set; }
+        public DateTime Date { get; private set; }
+        public int MenuId { get; private set; }
+        public Menu Menu { get; private set; }
 
         private MenuItem() { } // EF Core için
 
-        public MenuItem(string name, string category, Gramaj gramaj, Price? price = null, Calorie? calorie = null)
+        public MenuItem(string name, string category, Gramaj gramaj, Price price, Calorie calorie, DateTime date)
         {
-            if (string.IsNullOrWhiteSpace(name))
-                throw new ArgumentException("Name cannot be empty", nameof(name));
-            if (string.IsNullOrWhiteSpace(category))
-                throw new ArgumentException("Category cannot be empty", nameof(category));
-
-            Name = name;
-            Category = category;
+            Name = name ?? throw new ArgumentNullException(nameof(name));
+            Category = category ?? throw new ArgumentNullException(nameof(category));
             Gramaj = gramaj ?? throw new ArgumentNullException(nameof(gramaj));
             Price = price;
             Calorie = calorie;
+            Date = date;
         }
 
-        public void Update(string name, string category, Gramaj gramaj, Price? price = null, Calorie? calorie = null)
+        public void Update(string name, string category, Gramaj gramaj, Price price, Calorie calorie)
         {
-            if (string.IsNullOrWhiteSpace(name))
-                throw new ArgumentException("Name cannot be empty", nameof(name));
-            if (string.IsNullOrWhiteSpace(category))
-                throw new ArgumentException("Category cannot be empty", nameof(category));
-
-            Name = name;
-            Category = category;
-            Gramaj = gramaj ?? throw new ArgumentNullException(nameof(gramaj));
-            Price = price;
-            Calorie = calorie;
+            Name = name ?? Name;
+            Category = category ?? Category;
+            Gramaj = gramaj ?? Gramaj;
+            Price = price ?? Price;
+            Calorie = calorie ?? Calorie;
         }
     }
 }

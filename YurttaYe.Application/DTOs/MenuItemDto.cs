@@ -1,4 +1,4 @@
-// src/YurttaYe.Application/DTOs/MenuItemDto.cs
+using System;
 using YurttaYe.Domain.ValueObjects;
 
 namespace YurttaYe.Application.DTOs
@@ -9,7 +9,8 @@ namespace YurttaYe.Application.DTOs
         public string Name { get; set; }
         public string Category { get; set; }
         public Gramaj Gramaj { get; set; }
-        public Price? Price { get; set; }
-        public Calorie? Calorie { get; set; }
+        public Price Price { get; set; }
+        public Calorie Calorie { get; set; }
+        public DateTime Date { get; set; }
     }
 }

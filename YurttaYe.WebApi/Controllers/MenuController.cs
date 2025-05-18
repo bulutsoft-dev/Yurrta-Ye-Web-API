@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using YurttaYe.Application.Abstractions.Services;
 using YurttaYe.Application.DTOs;
 using YurttaYe.Application.Features.Commands;
-using YurttaYe.Application.Features.Queries;
 using MediatR;
 
 namespace YurttaYe.WebApi.Controllers
@@ -64,27 +63,27 @@ namespace YurttaYe.WebApi.Controllers
 
         [HttpPost("upload")]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Upload(IFormFile file)
+        public async Task<IActionResult> Upload([FromForm] IFormFile file)
         {
             if (file == null || file.Length == 0)
-                return BadRequest("No file uploaded");
+                return BadRequest("No file uploaded.");
 
-            var extension = Path.GetExtension(file.FileName).ToLower();
-            if (extension != ".pdf" && extension != ".xlsx")
-                return BadRequest("Unsupported file format");
+            var fileExtension = Path.GetExtension(file.FileName).ToLower();
+            if (fileExtension != ".xlsx")
+                return BadRequest("Only Excel (.xlsx) files are supported.");
 
             using var stream = file.OpenReadStream();
             var command = new ProcessMenuFileCommand
             {
                 FileStream = stream,
-                FileExtension = extension
+                FileExtension = fileExtension
             };
 
             var result = await _mediator.Send(command);
             if (!result.IsSuccess)
                 return BadRequest(result.ErrorMessage);
 
-            return Ok("File processed successfully");
+            return Ok("File processed successfully.");
         }
     }
 }

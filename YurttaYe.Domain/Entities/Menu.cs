@@ -1,5 +1,5 @@
-// src/YurttaYe.Domain/Entities/Menu.cs
-
+using System;
+using System.Collections.Generic;
 using YurttaYe.Domain.ValueObjects;
 
 namespace YurttaYe.Domain.Entities
@@ -10,39 +10,28 @@ namespace YurttaYe.Domain.Entities
         public DateTime Date { get; private set; }
         public string DayOfWeek { get; private set; }
         public CalorieRange TotalCalorie { get; private set; }
-        public List<MenuItem> Items { get; private set; } = new List<MenuItem>();
+        public List<MenuItem> Items { get; private set; } = new();
 
         private Menu() { } // EF Core için
 
         public Menu(DateTime date, string dayOfWeek, CalorieRange totalCalorie)
         {
-            if (date == default)
-                throw new ArgumentException("Date cannot be default", nameof(date));
-            if (string.IsNullOrWhiteSpace(dayOfWeek))
-                throw new ArgumentException("DayOfWeek cannot be empty", nameof(dayOfWeek));
-
             Date = date;
-            DayOfWeek = dayOfWeek;
+            DayOfWeek = dayOfWeek ?? throw new ArgumentNullException(nameof(dayOfWeek));
             TotalCalorie = totalCalorie ?? throw new ArgumentNullException(nameof(totalCalorie));
         }
 
         public void AddItem(MenuItem item)
         {
-            if (item == null)
-                throw new ArgumentNullException(nameof(item));
-            Items.Add(item);
-        }
-
-        public void RemoveItem(int itemId)
-        {
-            var item = Items.FirstOrDefault(i => i.Id == itemId);
             if (item != null)
-                Items.Remove(item);
+                Items.Add(item);
         }
 
-        public void UpdateTotalCalorie(CalorieRange totalCalorie)
+        public void Update(DateTime date, string dayOfWeek, CalorieRange totalCalorie)
         {
-            TotalCalorie = totalCalorie ?? throw new ArgumentNullException(nameof(totalCalorie));
+            Date = date;
+            DayOfWeek = dayOfWeek ?? DayOfWeek;
+            TotalCalorie = totalCalorie ?? TotalCalorie;
         }
     }
 }

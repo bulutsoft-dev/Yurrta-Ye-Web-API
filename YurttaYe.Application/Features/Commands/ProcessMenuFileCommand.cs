@@ -1,7 +1,9 @@
 // src/YurttaYe.Application/Features/Commands/ProcessMenuFileCommand.cs
-using MediatR;
+using System.Collections.Generic;
 using System.IO;
+using MediatR;
 using YurttaYe.Application.Common;
+using YurttaYe.Domain.Entities;
 
 namespace YurttaYe.Application.Features.Commands
 {

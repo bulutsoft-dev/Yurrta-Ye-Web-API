@@ -1,12 +1,11 @@
-// src/YurttaYe.Application/Abstractions/Repositories/IUnitOfWork.cs
-using System;
 using System.Threading.Tasks;
 
 namespace YurttaYe.Application.Abstractions.Repositories
 {
-    public interface IUnitOfWork : IDisposable
+    public interface IUnitOfWork
     {
         IMenuItemRepository MenuItems { get; }
+        IUserRepository Users { get; }
         Task<int> SaveChangesAsync();
     }
 }

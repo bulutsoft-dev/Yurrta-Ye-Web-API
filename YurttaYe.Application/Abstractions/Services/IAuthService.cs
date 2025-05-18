@@ -1,9 +1,10 @@
-// src/YurttaYe.Application/Abstractions/Services/IAuthService.cs
+using System.Threading.Tasks;
+
 namespace YurttaYe.Application.Abstractions.Services
 {
     public interface IAuthService
     {
-        string GenerateJwtToken(string username, string role);
-        bool ValidateCredentials(string username, string password);
+        Task<bool> ValidateCredentialsAsync(string username, string password);
+        Task<string> GenerateJwtTokenAsync(string username, string role);
     }
 }

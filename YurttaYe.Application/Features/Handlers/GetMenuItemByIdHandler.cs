@@ -1,8 +1,8 @@
 // src/YurttaYe.Application/Features/Handlers/GetMenuItemByIdHandler.cs
-using AutoMapper;
-using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
+using AutoMapper;
+using MediatR;
 using YurttaYe.Application.Abstractions.Repositories;
 using YurttaYe.Application.DTOs;
 using YurttaYe.Application.Features.Queries;
@@ -22,8 +22,8 @@ namespace YurttaYe.Application.Features.Handlers
 
         public async Task<MenuItemDto> Handle(GetMenuItemByIdQuery request, CancellationToken cancellationToken)
         {
-            var menuItem = await _unitOfWork.MenuItems.GetByIdAsync(request.Id);
-            return _mapper.Map<MenuItemDto>(menuItem);
+            var item = await _unitOfWork.MenuItems.GetByIdAsync(request.Id);
+            return _mapper.Map<MenuItemDto>(item);
         }
     }
 }

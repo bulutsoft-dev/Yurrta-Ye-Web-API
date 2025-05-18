@@ -1,7 +1,8 @@
 // src/YurttaYe.Application/Features/Handlers/UpdateMenuItemHandler.cs
-using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
+using AutoMapper;
+using MediatR;
 using YurttaYe.Application.Abstractions.Repositories;
 using YurttaYe.Application.Common;
 using YurttaYe.Application.Features.Commands;
@@ -12,10 +13,12 @@ namespace YurttaYe.Application.Features.Handlers
     public class UpdateMenuItemHandler : IRequestHandler<UpdateMenuItemCommand, Result>
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
 
-        public UpdateMenuItemHandler(IUnitOfWork unitOfWork)
+        public UpdateMenuItemHandler(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
         public async Task<Result> Handle(UpdateMenuItemCommand request, CancellationToken cancellationToken)
@@ -26,12 +29,11 @@ namespace YurttaYe.Application.Features.Handlers
 
             var dto = request.MenuItem;
             menuItem.Update(
-                name: dto.Name,
-                category: dto.Category,
-                gramaj: new Gramaj(dto.GramajValue, dto.GramajUnit),
-                price: dto.PriceValue.HasValue ? new Price(dto.PriceValue.Value, dto.PriceCurrency) : null,
-                calorie: dto.CalorieValue.HasValue ? new Calorie(dto.CalorieValue.Value) : null
-            );
+                dto.Name,
+                dto.Category,
+                new Gramaj(dto.GramajValue, dto.GramajUnit),
+                dto.PriceValue.HasValue ? new Price(dto.PriceValue.Value, dto.PriceCurrency) : null,
+                dto.CalorieValue.HasValue ? new Calorie(dto.CalorieValue.Value) : null);
 
             await _unitOfWork.MenuItems.UpdateAsync(menuItem);
             await _unitOfWork.SaveChangesAsync();

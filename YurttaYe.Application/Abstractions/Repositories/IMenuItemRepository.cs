@@ -1,4 +1,3 @@
-// src/YurttaYe.Application/Abstractions/Repositories/IMenuItemRepository.cs
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using YurttaYe.Domain.Entities;

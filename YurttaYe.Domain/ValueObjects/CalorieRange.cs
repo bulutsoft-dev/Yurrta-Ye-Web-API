@@ -1,4 +1,3 @@
-// src/YurttaYe.Domain/ValueObjects/CalorieRange.cs
 namespace YurttaYe.Domain.ValueObjects
 {
     public class CalorieRange
@@ -10,25 +9,9 @@ namespace YurttaYe.Domain.ValueObjects
 
         public CalorieRange(Calorie min, Calorie max)
         {
-            if (min == null || max == null)
-                throw new ArgumentNullException("Min and Max calorie cannot be null");
-            if (min.Value > max.Value)
-                throw new ArgumentException("Min calorie cannot be greater than Max calorie");
-
-            Min = min;
-            Max = max;
-        }
-
-        public override bool Equals(object obj)
-        {
-            if (obj is CalorieRange other)
-                return Min.Equals(other.Min) && Max.Equals(other.Max);
-            return false;
-        }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Min, Max);
+            Min = min ?? throw new ArgumentNullException(nameof(min));
+            Max = max ?? throw new ArgumentNullException(nameof(max));
+            if (min.Value > max.Value) throw new ArgumentException("Min calorie cannot be greater than max");
         }
     }
 }

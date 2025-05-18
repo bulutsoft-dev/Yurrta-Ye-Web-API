@@ -17,18 +17,21 @@ namespace YurttaYe.WebApi.Controllers
         }
 
         [HttpPost("login")]
-        public IActionResult Login([FromBody] LoginModel model)
+        public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {
-            if (_authService.ValidateCredentials(model.Username, model.Password))
-            {
-                var token = _authService.GenerateJwtToken(model.Username, "Admin");
-                return Ok(new { Token = token });
-            }
-            return Unauthorized("Invalid credentials");
+            if (string.IsNullOrEmpty(request.Username) || string.IsNullOrEmpty(request.Password))
+                return BadRequest("Username and password are required.");
+
+            var isValid = await _authService.ValidateCredentialsAsync(request.Username, request.Password);
+            if (!isValid)
+                return Unauthorized("Invalid username or password.");
+
+            var token = await _authService.GenerateJwtTokenAsync(request.Username, "Admin");
+            return Ok(token);
         }
     }
 
-    public class LoginModel
+    public class LoginRequest
     {
         public string Username { get; set; }
         public string Password { get; set; }

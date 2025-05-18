@@ -1,4 +1,3 @@
-// src/YurttaYe.Application/Abstractions/Services/IFileProcessingService.cs
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;

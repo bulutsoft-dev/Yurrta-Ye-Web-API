@@ -1,4 +1,3 @@
-// src/YurttaYe.Application/Abstractions/Services/IMenuItemService.cs
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using YurttaYe.Application.DTOs;
