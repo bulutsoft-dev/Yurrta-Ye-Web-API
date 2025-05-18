@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("YurttaYe.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a83afa07588f5991d002e19531e916956a0f98a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bbc61c5fc6ee98fec3da56071b08d427286b27b0")]
 [assembly: System.Reflection.AssemblyProductAttribute("YurttaYe.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YurttaYe.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
