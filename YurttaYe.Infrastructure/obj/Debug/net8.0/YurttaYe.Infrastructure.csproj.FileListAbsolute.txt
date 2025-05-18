@@ -1,0 +1,12 @@
+/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Infrastructure/bin/Debug/net8.0/YurttaYe.Infrastructure.deps.json
+/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Infrastructure/bin/Debug/net8.0/YurttaYe.Infrastructure.dll
+/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Infrastructure/bin/Debug/net8.0/YurttaYe.Infrastructure.pdb
+/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Infrastructure/obj/Debug/net8.0/YurttaYe.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Infrastructure/obj/Debug/net8.0/YurttaYe.Infrastructure.AssemblyInfoInputs.cache
+/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Infrastructure/obj/Debug/net8.0/YurttaYe.Infrastructure.AssemblyInfo.cs
+/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Infrastructure/obj/Debug/net8.0/YurttaYe.Infrastructure.csproj.CoreCompileInputs.cache
+/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Infrastructure/obj/Debug/net8.0/YurttaYe.Infrastructure.sourcelink.json
+/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Infrastructure/obj/Debug/net8.0/YurttaYe.Infrastructure.dll
+/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Infrastructure/obj/Debug/net8.0/refint/YurttaYe.Infrastructure.dll
+/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Infrastructure/obj/Debug/net8.0/YurttaYe.Infrastructure.pdb
+/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Infrastructure/obj/Debug/net8.0/ref/YurttaYe.Infrastructure.dll
