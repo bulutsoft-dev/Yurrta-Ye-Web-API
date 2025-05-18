@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KMeZW+m61v2iruHhrqPs4YHI+pwKDvAnN2hbnLxhX66sVPUYkkTKEKvFn6RmY/A9fTJTdp7PSmo6yCKZ77nAZA==",
+  "dgSpecHash": "tc9PeIAZKC0=",
   "success": true,
   "projectFilePath": "/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.WebApi/YurttaYe.WebApi.csproj",
   "expectedPackageFiles": [
@@ -175,7 +175,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "YurttaYe.Infrastructure depends on EPPlus (>= 6.0.0) but EPPlus 6.0.0 was not found. An approximate best match of EPPlus 6.0.3 was resolved.",
+      "message": "YurttaYe.Infrastructure depends on EPPlus (>= 6.0.0) but EPPlus 6.0.0 was not found. EPPlus 6.0.3 was resolved instead.",
       "libraryId": "EPPlus",
       "targetGraphs": [
         "net8.0"
