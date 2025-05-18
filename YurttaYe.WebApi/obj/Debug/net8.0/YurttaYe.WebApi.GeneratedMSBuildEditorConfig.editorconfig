@@ -37,3 +37,7 @@ build_metadata.AdditionalFiles.CssScope =
 [/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.WebApi/Pages/Admin/Menu/Upload.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vTWVudS9VcGxvYWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
+
+[/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.WebApi/Pages/Menu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTWVudS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

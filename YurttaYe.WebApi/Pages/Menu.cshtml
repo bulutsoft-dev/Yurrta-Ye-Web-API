@@ -1,0 +1,36 @@
+// src/YurttaYe.WebApi/Pages/Menu.cshtml
+@page
+@model YurttaYe.WebApi.Pages.MenuModel
+@{
+    ViewData["Title"] = "Menu";
+}
+
+<h1>Weekly Menu</h1>
+
+@foreach (var menu in Model.Menus)
+{
+    <h3>@menu.Date.ToString("dd/MM/yyyy") (@menu.DayOfWeek)</h3>
+    <p>Total Calorie: @menu.TotalCalorie.Min.Value - @menu.TotalCalorie.Max.Value kkal</p>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Gramaj</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in menu.Items)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Category</td>
+                <td>@item.Gramaj.Value @item.Gramaj.Unit</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+
+    <script src="~/js/site.js"></script>

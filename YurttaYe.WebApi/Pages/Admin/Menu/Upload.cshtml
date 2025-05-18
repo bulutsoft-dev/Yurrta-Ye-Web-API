@@ -1,18 +1,35 @@
-@model TModel
-
+// src/YurttaYe.WebApi/Pages/Admin/Menu/Upload.cshtml
+@page
+@model YurttaYe.WebApi.Pages.Admin.Menu.UploadModel
 @{
-    Layout = null;
+    ViewData["Title"] = "Upload Menu File";
 }
 
-<!DOCTYPE html>
+<h1>Upload Menu File</h1>
 
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
-</div>
-</body>
-</html>
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="file">Select PDF or Excel File</label>
+        <input type="file" id="file" name="file" class="form-control" accept=".pdf,.xlsx" />
+    </div>
+    <button type="submit" class="btn btn-primary">Upload</button>
+    <a asp-page="Index" class="btn btn-secondary">Back to List</a>
+</form>
+
+@if (Model.Message != null)
+{
+    <div class="alert @(Model.Success ? "alert-success" : "alert-danger")">
+        @Model.Message
+    </div>
+}
+
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function (e) {
+            var fileInput = document.querySelector('#file');
+            if (!fileInput.files.length) {
+                e.preventDefault();
+                alert('Please select a file.');
+            }
+        });
+    </script>

@@ -1,2 +1,44 @@
+// src/YurttaYe.WebApi/Pages/Admin/Menu/Index.cshtml
+@page
+@model YurttaYe.WebApi.Pages.Admin.Menu.IndexModel
+@{
+    ViewData["Title"] = "Menu Items";
+}
 
-<h2>title</h2>
+<h1>Menu Items</h1>
+
+<p>
+    <a asp-page="Create" class="btn btn-primary">Create New</a>
+    <a asp-page="Upload" class="btn btn-secondary">Upload File</a>
+</p>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Gramaj</th>
+        <th>Price</th>
+        <th>Calorie</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.MenuItems)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Category</td>
+            <td>@item.Gramaj.Value @item.Gramaj.Unit</td>
+            <td>@(item.Price != null ? $"{item.Price.Value} {item.Price.Currency}" : "N/A")</td>
+            <td>@(item.Calorie != null ? $"{item.Calorie.Value} kkal" : "N/A")</td>
+            <td>
+                <a asp-page="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Edit</a>
+                <form method="post" asp-page-handler="Delete" asp-route-id="@item.Id" style="display:inline;">
+                    <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                </form>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

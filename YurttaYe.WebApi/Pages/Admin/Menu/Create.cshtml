@@ -1,18 +1,52 @@
-@model TModel
-
+// src/YurttaYe.WebApi/Pages/Admin/Menu/Create.cshtml
+@page
+@model YurttaYe.WebApi.Pages.Admin.Menu.CreateModel
 @{
-    Layout = null;
+    ViewData["Title"] = "Create Menu Item";
 }
 
-<!DOCTYPE html>
+<h1>Create Menu Item</h1>
 
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
-</div>
-</body>
-</html>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="MenuItem.Name"></label>
+        <input asp-for="MenuItem.Name" class="form-control" />
+        <span asp-validation-for="MenuItem.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="MenuItem.Category"></label>
+        <select asp-for="MenuItem.Category" class="form-control">
+            <option value="Çorba">Çorba</option>
+            <option value="Ana Yemek">Ana Yemek</option>
+            <option value="Yan Yemek">Yan Yemek</option>
+            <option value="Salata/Tatlı">Salata/Tatlı</option>
+            <option value="Ek Ürün">Ek Ürün</option>
+        </select>
+        <span asp-validation-for="MenuItem.Category" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="MenuItem.GramajValue"></label>
+        <input asp-for="MenuItem.GramajValue" class="form-control" />
+        <span asp-validation-for="MenuItem.GramajValue" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="MenuItem.GramajUnit"></label>
+        <select asp-for="MenuItem.GramajUnit" class="form-control">
+            <option value="g">g</option>
+            <option value="ml">ml</option>
+        </select>
+        <span asp-validation-for="MenuItem.GramajUnit" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="MenuItem.PriceValue"></label>
+        <input asp-for="MenuItem.PriceValue" class="form-control" />
+        <span asp-validation-for="MenuItem.PriceValue" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="MenuItem.CalorieValue"></label>
+        <input asp-for="MenuItem.CalorieValue" class="form-control" />
+        <span asp-validation-for="MenuItem.CalorieValue" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a asp-page="Index" class="btn btn-secondary">Back to List</a>
+</form>
