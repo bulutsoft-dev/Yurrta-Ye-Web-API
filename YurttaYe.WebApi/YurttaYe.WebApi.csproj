@@ -18,10 +18,4 @@
       <ProjectReference Include="..\YurttaYe.Infrastructure\YurttaYe.Infrastructure.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Controllers\" />
-      <Folder Include="Middleware\" />
-      <Folder Include="Pages\Admin\Menu\" />
-    </ItemGroup>
-
 </Project>

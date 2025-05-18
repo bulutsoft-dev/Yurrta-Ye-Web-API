@@ -32,9 +32,13 @@ YurttaYe/
 │   │       └── Result.cs
 │   ├── YurttaYe.Domain/
 │   │   ├── Entities/
-│   │   │   └── MenuItem.cs
+│   │   │   ├── MenuItem.cs
+│   │   │   └── Menu.cs
 │   │   └── ValueObjects/
-│   │       └── Price.cs
+│   │       ├── Price.cs
+│   │       ├── Gramaj.cs
+│   │       ├── Calorie.cs
+│   │       └── CalorieRange.cs
 │   ├── YurttaYe.Infrastructure/
 │   │   ├── Persistence/
 │   │   │   ├── Configurations/

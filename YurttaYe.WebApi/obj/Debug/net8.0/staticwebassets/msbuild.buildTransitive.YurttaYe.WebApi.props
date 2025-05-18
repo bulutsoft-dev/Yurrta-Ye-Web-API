@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/YurttaYe.WebApi.props" />
+</Project>

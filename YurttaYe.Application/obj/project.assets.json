@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "YurttaYe.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/YurttaYe.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/YurttaYe.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "YurttaYe.Domain/1.0.0": {
+      "type": "project",
+      "path": "../YurttaYe.Domain/YurttaYe.Domain.csproj",
+      "msbuildProject": "../YurttaYe.Domain/YurttaYe.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "YurttaYe.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/home/furkanblt/.nuget/packages/": {}
@@ -31,7 +50,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Domain/YurttaYe.Domain.csproj": {
+              "projectPath": "/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Domain/YurttaYe.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

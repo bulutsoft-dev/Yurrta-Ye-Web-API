@@ -17,3 +17,23 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = /home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.WebApi
 build_property._RazorSourceGeneratorDebug = 
+
+[/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.WebApi/Pages/Admin/Menu/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vTWVudS9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.WebApi/Pages/Admin/Menu/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vTWVudS9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.WebApi/Pages/Admin/Menu/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vTWVudS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.WebApi/Pages/Admin/Menu/Menu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vTWVudS9NZW51LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.WebApi/Pages/Admin/Menu/Upload.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vTWVudS9VcGxvYWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
