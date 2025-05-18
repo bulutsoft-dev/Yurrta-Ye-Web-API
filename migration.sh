@@ -1,4 +1,3 @@
-cd ..
 dotnet ef migrations add InitialCreate \
   --project YurttaYe.Infrastructure \
   --startup-project YurttaYe.WebApi \

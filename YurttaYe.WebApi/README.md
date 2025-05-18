@@ -1,7 +1,7 @@
     # YurttaYe Project Structure
     
     YurttaYe/
-    ├── src/
+    ├
     │   ├── YurttaYe.Application/
     │   │   ├── Abstractions/
     │   │   │   ├── Repositories/
