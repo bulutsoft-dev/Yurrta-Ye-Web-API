@@ -7,7 +7,20 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Persistence\Migrations\" />
+      <ProjectReference Include="..\YurttaYe.Application\YurttaYe.Application.csproj" />
+      <ProjectReference Include="..\YurttaYe.Domain\YurttaYe.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="EPPlus" Version="6.0.0" />
+      <PackageReference Include="ExcelPackage" Version="1.0.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+      <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.35.0" />
+      <PackageReference Include="OfficeOpenXml.Core.ExcelPackage" Version="1.0.0" />
+      <PackageReference Include="PDFsharp" Version="1.50.5147" />
+      <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.35.0" />
+      <PackageReference Include="Tesseract" Version="5.2.0" />
     </ItemGroup>
 
 </Project>
