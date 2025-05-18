@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.WebApi/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.WebApi/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.YurttaYe.WebApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.YurttaYe.WebApi.props",
+      "PackagePath": "build\\YurttaYe.WebApi.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.YurttaYe.WebApi.props",
+      "PackagePath": "buildMultiTargeting\\YurttaYe.WebApi.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.YurttaYe.WebApi.props",
+      "PackagePath": "buildTransitive\\YurttaYe.WebApi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

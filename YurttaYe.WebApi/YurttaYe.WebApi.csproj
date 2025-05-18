@@ -5,6 +5,7 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <RootNamespace>YurttaYe_Web_API</RootNamespace>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
 
     <ItemGroup>
@@ -21,6 +22,12 @@
       <ProjectReference Include="..\YurttaYe.Application\YurttaYe.Application.csproj" />
       <ProjectReference Include="..\YurttaYe.Domain\YurttaYe.Domain.csproj" />
       <ProjectReference Include="..\YurttaYe.Infrastructure\YurttaYe.Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
     </ItemGroup>
 
 </Project>
