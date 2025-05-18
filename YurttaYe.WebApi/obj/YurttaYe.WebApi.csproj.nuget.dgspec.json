@@ -135,7 +135,14 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Application/YurttaYe.Application.csproj": {
+                "projectPath": "/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Application/YurttaYe.Application.csproj"
+              },
+              "/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Domain/YurttaYe.Domain.csproj": {
+                "projectPath": "/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Domain/YurttaYe.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -147,6 +154,44 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "ExcelPackage": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.35.0, )"
+            },
+            "OfficeOpenXml.Core.ExcelPackage": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "PDFsharp": {
+              "target": "Package",
+              "version": "[1.50.5147, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.35.0, )"
+            },
+            "Tesseract": {
+              "target": "Package",
+              "version": "[5.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

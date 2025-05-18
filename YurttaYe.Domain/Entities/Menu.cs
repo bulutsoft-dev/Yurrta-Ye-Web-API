@@ -1,17 +1,15 @@
+// src/YurttaYe.Domain/Entities/Menu.cs
+
 using YurttaYe.Domain.ValueObjects;
 
-public class Menu
-{
-    
-}// src/YurttaYe.Domain/Entities/Menu.cs
 namespace YurttaYe.Domain.Entities
 {
     public class Menu
     {
         public int Id { get; private set; }
-        public DateTime Date { get; private set; } // Menünün tarihi (örneğin, 5/5/2025)
-        public string DayOfWeek { get; private set; } // Pazartesi, Salı, vb.
-        public CalorieRange TotalCalorie { get; private set; } // Günlük toplam kalori aralığı
+        public DateTime Date { get; private set; }
+        public string DayOfWeek { get; private set; }
+        public CalorieRange TotalCalorie { get; private set; }
         public List<MenuItem> Items { get; private set; } = new List<MenuItem>();
 
         private Menu() { } // EF Core için
