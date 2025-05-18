@@ -28,8 +28,9 @@ YurttaYe/
 │   │   │       ├── GetAllMenuItemsHandler.cs
 │   │   │       ├── GetMenuItemByIdHandler.cs
 │   │   │       └── ProcessMenuFileHandler.cs
-│   │   └── Common/
-│   │       └── Result.cs
+│   │   ├── Common/
+│   │   │   ├── Result.cs
+│   │   │   └── MappingProfile.cs
 │   ├── YurttaYe.Domain/
 │   │   ├── Entities/
 │   │   │   ├── MenuItem.cs
