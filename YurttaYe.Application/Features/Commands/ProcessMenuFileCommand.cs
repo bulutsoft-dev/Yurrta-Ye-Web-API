@@ -1,6 +1,13 @@
-namespace YurttaYe.Application.Features.Commands;
+// src/YurttaYe.Application/Features/Commands/ProcessMenuFileCommand.cs
+using MediatR;
+using System.IO;
+using YurttaYe.Application.Common;
 
-public class ProcessMenuFileCommand
+namespace YurttaYe.Application.Features.Commands
 {
-    
+    public class ProcessMenuFileCommand : IRequest<Result>
+    {
+        public Stream FileStream { get; set; }
+        public string FileExtension { get; set; }
+    }
 }

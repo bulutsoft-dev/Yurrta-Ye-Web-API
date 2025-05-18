@@ -1,6 +1,13 @@
-namespace YurttaYe.Application.Abstractions.Services;
+// src/YurttaYe.Application/Abstractions/Services/IFileProcessingService.cs
+using System.Collections.Generic;
+using System.IO;
+using System.Threading.Tasks;
+using YurttaYe.Domain.Entities;
 
-public class IFileProcessingService
+namespace YurttaYe.Application.Abstractions.Services
 {
-    
+    public interface IFileProcessingService
+    {
+        Task<List<Menu>> ProcessFileAsync(Stream fileStream, string fileExtension);
+    }
 }

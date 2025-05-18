@@ -1,6 +1,11 @@
-namespace YurttaYe.Application.Features.Queries;
+// src/YurttaYe.Application/Features/Queries/GetAllMenuItemsQuery.cs
+using MediatR;
+using System.Collections.Generic;
+using YurttaYe.Application.DTOs;
 
-public class GetAllMenuItemsQuery
+namespace YurttaYe.Application.Features.Queries
 {
-    
+    public class GetAllMenuItemsQuery : IRequest<IEnumerable<MenuItemDto>>
+    {
+    }
 }
