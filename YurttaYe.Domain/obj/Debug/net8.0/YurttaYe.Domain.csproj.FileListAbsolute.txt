@@ -1,0 +1,12 @@
+/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Domain/bin/Debug/net8.0/YurttaYe.Domain.deps.json
+/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Domain/bin/Debug/net8.0/YurttaYe.Domain.dll
+/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Domain/bin/Debug/net8.0/YurttaYe.Domain.pdb
+/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Domain/obj/Debug/net8.0/YurttaYe.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Domain/obj/Debug/net8.0/YurttaYe.Domain.AssemblyInfoInputs.cache
+/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Domain/obj/Debug/net8.0/YurttaYe.Domain.AssemblyInfo.cs
+/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Domain/obj/Debug/net8.0/YurttaYe.Domain.csproj.CoreCompileInputs.cache
+/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Domain/obj/Debug/net8.0/YurttaYe.Domain.sourcelink.json
+/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Domain/obj/Debug/net8.0/YurttaYe.Domain.dll
+/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Domain/obj/Debug/net8.0/refint/YurttaYe.Domain.dll
+/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Domain/obj/Debug/net8.0/YurttaYe.Domain.pdb
+/home/furkanblt/RiderProjects/YurttaYe-Web-API/YurttaYe.Domain/obj/Debug/net8.0/ref/YurttaYe.Domain.dll
